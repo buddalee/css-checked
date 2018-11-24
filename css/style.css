@@ -1,0 +1,144 @@
+.container {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+}
+body {
+	overflow: hidden;
+}
+.bar {
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	top:0;
+	right:0;
+	z-index: 5;
+}
+label {
+	z-index: 5;
+	position: absolute;
+	padding: 10px;
+	cursor: pointer;
+}
+.label1 {
+	top: 0;
+	right: 150px;
+}
+.label2 {
+	top: 0;
+	right: 100px;
+}
+.label3 {
+	top: 0;
+	right: 50px;
+}
+.label4 {
+	top: 0;
+	right: 0;
+}
+ [type="radio"] {
+	display: none;
+}
+ [type="radio"]:checked + .label1,
+ [type="radio"]:checked + .label2,
+ [type="radio"]:checked + .label3,
+ [type="radio"]:checked + .label4{
+	border-bottom: 5px solid #fff;
+}
+ [type="radio"]:checked + .label1 ~ .area-color1  {
+	top: 0;
+	 left: 0%;
+	 transition: all 500ms;
+}
+ [type="radio"]:checked + .label2 ~ .area-color1  {
+	top: 0;
+	 left: -100%;
+/* 	height: 0;  */
+	 transition: all 500ms;
+}
+ [type="radio"]:checked + .label2 ~ .area-color2  {
+	left: 0;
+	top: 0; 
+	 transition: all 500ms;
+}
+ [type="radio"]:checked + .label2 ~ .area-color3  {
+	left: -100%;
+	top: 100%; 
+	 transition: all 500ms;
+}
+ [type="radio"]:checked + .label2 ~ .area-color4  {
+	left: 0%;
+	top: 100%; 
+	 transition: all 500ms;
+}
+ [type="radio"]:checked + .label3 ~ .area-color1  {
+	top: -100%;
+	left: 0%;
+	 transition: all 500ms;
+}
+ [type="radio"]:checked + .label3 ~ .area-color2  {
+	left: 100%;
+	top: -100%; 
+	 transition: all 500ms;
+}
+ [type="radio"]:checked + .label3 ~ .area-color3  {
+	left: 0;
+	top: 0; 
+	 transition: all 500ms;
+}
+ [type="radio"]:checked + .label3 ~ .area-color4  {
+	left: 100%;
+	top: 0; 
+	 transition: all 500ms;
+}
+
+ [type="radio"]:checked + .label4 ~ .area-color1 {
+	top: -100%!important;
+	left: -100%!important; 
+	 transition: all 500ms;
+}
+ [type="radio"]:checked + .label4 ~ .area-color2  {
+	left: 0%;
+	top: -100%; 
+	 transition: all 500ms;
+}
+ [type="radio"]:checked + .label4 ~ .area-color3  {
+	left: -100%;
+	top: 0%; 
+	 transition: all 500ms;
+}
+ [type="radio"]:checked + .label4 ~ .area-color4  {
+	left: 0%;
+	top: 0%; 
+	 transition: all 500ms;
+}
+.area {
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	position: absolute;
+}
+.area-color1 {
+	top: 0;
+	left: 0;
+	background-color: orange;
+	transition: all 500ms;
+}
+.area-color2 {
+	top: 0;
+	left: 100%;
+	background-color: #108bcd;
+	transition: all 500ms; 
+}
+.area-color3 {
+	top: 100%;
+	left: 0;
+	background-color: red;
+	transition: all 500ms; 
+}
+.area-color4 {
+	top: 100%;
+	left: 100%;
+	background-color: green;
+	transition: all 500ms; 
+}

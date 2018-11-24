@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>for bird</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      .container {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+}
+body {
+	overflow: hidden;
+}
+.bar {
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	top:0;
+	right:0;
+	z-index: 5;
+}
+label {
+	z-index: 5;
+	position: absolute;
+	padding: 10px;
+	cursor: pointer;
+}
+.label1 {
+	top: 0;
+	right: 150px;
+}
+.label2 {
+	top: 0;
+	right: 100px;
+}
+.label3 {
+	top: 0;
+	right: 50px;
+}
+.label4 {
+	top: 0;
+	right: 0;
+}
+ [type="radio"] {
+	display: none;
+}
+ [type="radio"]:checked + .label1,
+ [type="radio"]:checked + .label2,
+ [type="radio"]:checked + .label3,
+ [type="radio"]:checked + .label4{
+	border-bottom: 5px solid #fff;
+}
+ [type="radio"]:checked + .label1 ~ .area-color1  {
+	top: 0;
+	 left: 0%;
+	 transition: all 500ms;
+}
+ [type="radio"]:checked + .label2 ~ .area-color1  {
+	top: 0;
+	 left: -100%;
+/* 	height: 0;  */
+	 transition: all 500ms;
+}
+ [type="radio"]:checked + .label2 ~ .area-color2  {
+	left: 0;
+	top: 0; 
+	 transition: all 500ms;
+}
+ [type="radio"]:checked + .label2 ~ .area-color3  {
+	left: -100%;
+	top: 100%; 
+	 transition: all 500ms;
+}
+ [type="radio"]:checked + .label2 ~ .area-color4  {
+	left: 0%;
+	top: 100%; 
+	 transition: all 500ms;
+}
+ [type="radio"]:checked + .label3 ~ .area-color1  {
+	top: -100%;
+	left: 0%;
+	 transition: all 500ms;
+}
+ [type="radio"]:checked + .label3 ~ .area-color2  {
+	left: 100%;
+	top: -100%; 
+	 transition: all 500ms;
+}
+ [type="radio"]:checked + .label3 ~ .area-color3  {
+	left: 0;
+	top: 0; 
+	 transition: all 500ms;
+}
+ [type="radio"]:checked + .label3 ~ .area-color4  {
+	left: 100%;
+	top: 0; 
+	 transition: all 500ms;
+}
+
+ [type="radio"]:checked + .label4 ~ .area-color1 {
+	top: -100%!important;
+	left: -100%!important; 
+	 transition: all 500ms;
+}
+ [type="radio"]:checked + .label4 ~ .area-color2  {
+	left: 0%;
+	top: -100%; 
+	 transition: all 500ms;
+}
+ [type="radio"]:checked + .label4 ~ .area-color3  {
+	left: -100%;
+	top: 0%; 
+	 transition: all 500ms;
+}
+ [type="radio"]:checked + .label4 ~ .area-color4  {
+	left: 0%;
+	top: 0%; 
+	 transition: all 500ms;
+}
+.area {
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	position: absolute;
+}
+.area-color1 {
+	top: 0;
+	left: 0;
+	background-color: orange;
+	transition: all 500ms;
+}
+.area-color2 {
+	top: 0;
+	left: 100%;
+	background-color: #108bcd;
+	transition: all 500ms; 
+}
+.area-color3 {
+	top: 100%;
+	left: 0;
+	background-color: red;
+	transition: all 500ms; 
+}
+.area-color4 {
+	top: 100%;
+	left: 100%;
+	background-color: green;
+	transition: all 500ms; 
+}
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+		<input type="radio" name="test"id="a1" checked>
+		<label class="label1" for="a1">
+			區塊1
+		</label>
+		<input type="radio" name="test" id="a2">
+		<label class="label2" for="a2">
+			區塊2
+		</label>
+		<input type="radio"  name="test"id="a3">
+		<label class="label3" for="a3">
+			區塊3
+		</label>
+		<input type="radio" name="test" id="a4">
+		<label class="label4" for="a4">
+			區塊4
+		</label>
+		<div class="area area-color1 "></div>
+		<div class="area area-color2"></div>
+		<div class="area area-color3"></div>
+		<div class="area area-color4"></div>		
+</div>
+  
+  
+
+</body>
+
+</html>
